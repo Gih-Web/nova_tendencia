@@ -1,0 +1,88 @@
+.header{
+background-color: #1F1F1F; /* cor de fundo */
+padding: 40px ;/* tamanho da área (do cabeçalho) */
+align-items: center;/* alinhamento dos itens */
+display: flex; /* Redimensionar*/
+justify-content: space-between;/*colocar os itens lado a lado, colocando os espaços so lado */
+}
+
+.logo{
+
+display: flex;
+align-items: center;
+color: #ffffff;
+font-size: 18; /* tamanho da fonte do texto*/
+font-weight: bold; /*fonte em negrito*/
+}
+.logo img{ /*dimensões da imagem*/ 
+    width: 80px;
+    margin-right: 10px;
+
+}
+
+/* cofiguração da barra de pesquisa*/
+.search-box{
+    flex:1;
+    max-width: 800px;/*largura máxima*/
+    margin: 0 20px;/*margem superior e lateral*/
+    border:none; /**/
+    border-radius: 100px;/*largura da borda*/
+    font-size:16px;/*tamanho do texto*/
+
+}
+
+.search-box input{ /* configuração da parte de dentro */
+
+    width: 100%; /* preencher toda a área*/
+    padding: 10px 30px 10px 15px; /*definindo o espaço cima direita, baixo, esquerda*/
+    border: none; /* borda da caixa*/
+    border-radius: 5px; /*curvatura da borda*/
+    font-size: 15px; /* tamanho da fonte do texto */
+    outline: none; /* Remove a linha de fora quando clica na caixa de texto*/
+}
+.icons{
+    display: flex; /* responsivo*/
+    gap: 40px; /*espaço entre icones*/
+    align-items: center; /*centralizar icones */
+    margin-right: 60px;
+
+}
+.icons img{ /*configurando o tamanho das imagens dos icones*/
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+}
+
+/*.icons:hover {
+    background-color: rgb(49, 49, 49);
+}*/
+
+.footer{
+    background-color: #e7e7e7; /* cor de fundo*/
+    padding: 15px 40px 15px 40px; /*dimensão*/
+    color: #1F1F1F; /* cor do texto*/
+    font-family: Arial, Helvetica, sans-serif; /* fonte dos textos*/
+}
+
+.footer-esquerdo{
+    font-weight: bold; /*colocar  texto em negrito */
+    margin: 0;
+
+}
+
+.footer-direito{
+    text-align: right; /*Texto alinhado à direito*/
+
+}
+
+.icons-sociais{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+
+}.icons-sociais img{
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s; /* animação suave*/
+}
