@@ -86,3 +86,86 @@ font-weight: bold; /*fonte em negrito*/
     height: 32px;
     transition: transform 0.3s; /* animação suave*/
 }
+
+
+
+
+/*Inicio do Estilo da Tela de Cadastro--------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+.bg-image {
+  background: url('../IMG/bg-cadastro.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* efeito de overlay escuro */
+}
+
+.bg-image .text-center {
+  position: relative;
+  z-index: 2;
+}
+
+
+.logo {
+  max-width: 120px;
+  align-items: center;
+}
+
+input.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+button.btn-dark {
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+button.toggle-password {
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 991px) {
+  .bg-image {
+    display: none;
+  }
+}
+/*Fim do Estilo da Tela de Cadastro----------------------------------*/
+
+/*Inicio da Imagem de Fundo com Overlay-----------------------------*/
+.bg-image {
+  background: url('../IMG/foto.init.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+ 
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* deixa a imagem escura */
+  z-index: 1;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2; /* fica acima do overlay escuro */
+}
+
+.logo {
+  max-width: 150px;
+}
+/*Fim da Imagem de Fundo com Overlay-------------------------------*/
+
