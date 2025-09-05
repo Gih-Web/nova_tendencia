@@ -13,27 +13,53 @@
 
     <div class="container-fluid">
         <div class="row min-vh-100">
-<div class="container-fluid">
-  <div class="row min-vh-100">
-    
-    <!--Coluna 1 (preta com logo)-->
-    <div class="col-4 bg-black d-flex justify-content-center align-items-center">
-      <img src="../IMG/Logo2.png" alt="logo2" class="img-fluid" style="max-width: 150px;">
-    </div>
-    
-    <!--Coluna 2 (branca com conteúdo)-->
-    <div class="col-8 bg-white d-flex justify-content-center align-items-center">
-      <img src="../IMG/Logo1.png" alt="logo1" class="img-fluid" style="max-width: 150px;">
-    </div>
-    
-  </div>
-</div>
+
+          <div class="container-fluid">
+            <div class="row min-vh-100">
+              
+              <!--Coluna 1 (preta com logo)-->
+              <div class="col-4 bg-black d-flex justify-content-center align-items-center">
+
+                <div id="login-bemvindo" class="overlay-content d-flex flex-column align-items-center text-center text-white px-25">
+                  <img src="../IMG/Logo2.png" alt="logo2" class="img-fluid" style="max-width: 150px;">
+                  <h2 class="fw-bold">Bem-Vindo!</h2>
+                  <p>Crie sua conta para iniciarmos<br>uma nova experiência</p>
+                </div>
+                
+              </div>
+              
+              <!--Coluna 2 (branca com conteúdo)-->
+              <div class="col-8 bg-white d-flex justify-content-center align-items-center">
+
+                <div class="w-100" style="max-width: 400px">
+                  <div class="text-center mb-4 d-flex flex-column align-items-center text-center px-0">
+                    <img src="../IMG/Logo1.png" alt="Logo" class="mb-3 logo" />
+                    <h3 class="fw-bold">Login</h3>
+                  </div>
+                
+
+
+                  <div class="w-100 d-flex justify-content-center">
+                        <form class="login-card shadow-sm p-4 roudend-3">
+                          <h4 class="fs - 5 fw-semibold mb-3 text-uppercase">E-mail:</h4>
+                          <input type="email" class="form-control mb-3" placeholder="Digite seu e-mail">
+
+                          <h4 class="fs - 5 fw-semibold mb-3 text-uppercase">Senha:</h4>
+                          <input type="password" class="form-control mb-3" placeholder="Digite sua senha">
+                          <button type="submit" class="btn btn-dark w-100 mt-3">Entrar</button>
+                          <button type="submit" class="btn btn-white border border-dark w-100 mt-3">Cadastrar</button>
+                        </form>
+
+                  </div>
+                </div>
+              </div>
+          
+            </div >
+        </div>
 
 
         </div>
-
     </div>
-
 
   </body>
 </html>

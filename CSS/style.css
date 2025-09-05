@@ -15,8 +15,8 @@ font-size: 18; /* tamanho da fonte do texto*/
 font-weight: bold; /*fonte em negrito*/
 }
 .logo img{ /*dimensões da imagem*/ 
-    width: 80px;
-    margin-right: 10px;
+  width: 80px;
+  margin-right: 10px;
 
 }
 
@@ -169,3 +169,20 @@ button.toggle-password {
 }
 /*Fim da Imagem de Fundo com Overlay-------------------------------*/
 
+/*area de login*/
+.login-card{
+  background-color: white;
+  border: 1px;
+
+}
+
+
+#login-bemvindo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),   /* camada preta com 60% de opacidade */
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../IMG/foto.init.png") center/cover no-repeat;
+}

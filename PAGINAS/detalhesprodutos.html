@@ -1,74 +1,220 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalhes do Produto - Loja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/detalhesproduto.css">
+</head>
+<body>
+
+<!--Inicio do Header---------------------------------------------------->
+
+
+
+<header class="header">
+  <div class="logo">
+    <img src="../IMG/Logo1.png" alt="Logo da Loja Nova Tendência"/>
+  </div>
+
+  <div class="search-box">
+    <input type="text" class="pesquisar" placeholder="Pesquisar">
+  </div>
+
+  <!-- Botão hambúrguer (visível só no mobile) -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <!-- Ícones -->
+  <div class="icons" id="icons">
+    <img src="../IMG/ajuda-chat.png" alt="Chat">
+    <img src="../IMG/sacola.png" alt="Carrinho">
+    <img src="../IMG/usuario.png" alt="Perfil">
+  </div>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 10px 20px;
+  }
+
+  .header {
+  padding: 40px 30px; /* aumenta em cima e embaixo */
+}
+
+
+  .logo img {
+    height: 40px;
+  }
+
+  .search-box {
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  .pesquisar {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+  }
+
+  .icons img {
+    width: 28px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  /* Botão hamburguer */
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .icons {
+      display: none; /* esconde os ícones no mobile */
+      flex-direction: column;
+      background: #1f1f1f;
+      position: absolute;
+      top: 60px; /* abaixo do header */
+      right: 20px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .icons img {
+      margin: 10px 0;
+    }
+
+    .menu-toggle {
+      display: block; /* mostra hambúrguer no mobile */
+    }
+  }
+</style>
+
+<script>
+  // Script para abrir/fechar os ícones
+  const menuToggle = document.getElementById("menu-toggle");
+  const icons = document.getElementById("icons");
+
+  menuToggle.addEventListener("click", () => {
+    if (icons.style.display === "flex") {
+      icons.style.display = "none";
+    } else {
+      icons.style.display = "flex";
+    }
+  });
+</script>
+
+
+
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+
+
+<!--Fim do Header------------------------------------------------------>
+
+
+<div class="container my-5">
+  <div class="row">
     
-    <header class="header">
-        <div class="logo">
-            <img src="IMG/Logo1.png" alt="Logo da Loja Nova Tendência"/>
-
-
-        </div>
-        <div class="search-box">
-            <input type="text" class="pesquisar" placeholder="Pesquisar">
-        </div>
-        <div class="icons">
-            <img src="../IMG/ajuda-chat.png" alt="Chat">
-            <img src="../IMG/sacola.png" alt="Carrinho">
-            <img src="../IMG/usuario.png" alt="Perfil">
-        </div>
-
-    </header>
-
-
-
-
-    <footer class="footer">
-
-        <!-- Area do rodapé que ficará os textos do lado esquerdo-->
-        <div class="footer-esquerdo">
-            <p> Desenvolvido por Giovanna Evellyn Santos Silva</p>
-
-            <a href="">
-                <p>Sobre nós</p>
-            </a>
-
-            <a href="">
-                <p>Novidades</p>
-            </a>
-
-            
-
-        </div>
-
-        <!-- Area diretia com as redes sociais -->
+    <!--Inicio da Galeria de Imagens----------------------------------------->
+    <div class="col-lg-6 d-flex">
+      <!-- Miniaturas -->
+      <div class="d-flex flex-column me-3">
+        <img src="../IMG/vestidos/Rectangle 12.png" class="img-thumbnail mb-2" alt="Produto Verde">
+        <img src="../IMG/vestidos/Rectangle 13.png" class="img-thumbnail mb-2" alt="Produto Azul">
+        <img src="../IMG/vestidos/Rectangle 14.png" class="img-thumbnail mb-2" alt="Produto Rosa">
         
-        <div class="footer-direito">
-            <p>Conheça nossas redes sociais</p>
-            <div class="icons-sociais">
-                <a href="">
-                    <img src="../IMG/instagram.png" alt="Instagram">
+      </div>
+      <!-- Imagem principal -->
+      <div class="flex-grow-1 position-relative">
+        <img src="IMG/produto2.jpg" class="img-fluid rounded shadow" alt="Produto Destaque">
+        <span class="text-danger fw-bold d-block mt-2">(Esgotado)</span>
+      </div>
+    </div>
+    <!--Fim da Galeria de Imagens-------------------------------------------->
+    
+    <!--Inicio das Informações do Produto------------------------------------>
+    <div class="col-lg-6">
+      <h4>Vestido Longo com Fenda Lateral e Babado no Decote</h4>
+      <h3 class="text-warning fw-bold">R$ 89,90</h3>
+      <p class="text-muted">3x de 29,97 no Cartão</p>
 
-                </a>
+      <!-- Opções de cor -->
+      <div class="mb-3">
+        <label class="fw-bold">Cor:</label><br>
+        <span class="d-inline-block rounded-circle bg-primary p-3 me-2"></span>
+        <span class="d-inline-block rounded-circle bg-pink p-3 me-2"></span>
+        <span class="d-inline-block rounded-circle bg-success p-3"></span>
+      </div>
 
+      <!-- Tamanhos -->
+      <div class="mb-3">
+        <label class="fw-bold">Tamanhos:</label><br>
+        <button class="btn btn-outline-dark me-2">P</button>
+        <button class="btn btn-outline-dark me-2">M</button>
+        <button class="btn btn-outline-dark" disabled>G</button>
+      </div>
 
-                <a href="">
-                    <img src="../IMG/facebook.png" alt="Facebook">
-                </a>
+      <!-- Botão -->
+      <button class="btn btn-success w-100">
+        <i class="bi bi-bag"></i> ADICIONAR À SACOLA
+      </button>
+    </div>
+    <!--Fim das Informações do Produto--------------------------------------->
+  </div>
 
-            </div>
+  <!--Inicio da Descrição e Detalhes---------------------------------------->
+  <div class="mt-5">
+    <h6 class="fw-bold text-secondary">DESCRIÇÃO DO PRODUTO</h6>
+    <hr>
+    <p>
+      Elegante e confortável, este vestido longo azul é a escolha perfeita para diversas ocasiões.
+      Com modelagem fluida, decote em V com detalhe em babado e amarração delicada, ele valoriza a silhueta de forma leve e sofisticada.
+      A fenda lateral garante um toque moderno e sensual, enquanto o tecido leve proporciona frescor e movimento.
+      Ideal para passeios, encontros e eventos ao ar livre, combinando estilo e praticidade.
+    </p>
 
+    <h6 class="fw-bold text-secondary mt-4">DETALHES DO PRODUTO</h6>
+    <hr>
+    <ul>
+      <li>Cor: Azul</li>
+      <li>Comprimento: Longo</li>
+      <li>Decote em V com babado e amarração</li>
+      <li>Fenda lateral</li>
+      <li>Alças finas ajustáveis</li>
+      <li>Tecido leve e confortável</li>
+    </ul>
+  </div>
+  <!--Fim da Descrição e Detalhes-------------------------------------------->
 
-        </div>
-    </footer>
+  <!--Inicio da Avaliação--------------------------------------------------->
+  <div class="mt-5">
+    <h6 class="fw-bold text-secondary">AVALIAÇÕES</h6>
+    <div class="border p-4 rounded text-center shadow-sm" style="max-width: 400px;">
+      <h2 class="fw-bold">4.9</h2>
+      <div class="text-warning fs-4">
+        ★★★★☆
+      </div>
+      <p class="mt-2">Essa é a nota que este produto recebeu dos nossos clientes.</p>
+      <p class="text-muted">Média de 59 avaliações</p>
+    </div>
+  </div>
+  <!--Fim da Avaliação------------------------------------------------------->
+</div>
 
-
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Ícones Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</body>
 </html>
