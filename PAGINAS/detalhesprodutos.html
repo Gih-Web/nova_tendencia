@@ -41,16 +41,21 @@
     justify-content: space-between;
     align-items: center;
     background: #1f1f1f;
-    padding: 10px 20px;
+    padding: 15px 20px;
   }
 
   .header {
-  padding: 40px 30px; /* aumenta em cima e embaixo */
+  display: flex;
+  padding: 15px 20px; /* aumenta em cima e embaixo */
 }
 
 
   .logo img {
-    height: 40px;
+    display: flex;
+    height: 70px;
+    width: 80px;
+    margin-left: 20px;
+    cursor: pointer;
   }
 
   .search-box {
@@ -58,13 +63,7 @@
     margin: 0 20px;
   }
 
-  .pesquisar {
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-  }
-
+  
   .icons img {
     width: 28px;
     margin-left: 15px;
@@ -80,16 +79,23 @@
   }
 
   /* Responsivo */
-  @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
     .icons {
-      display: none; /* esconde os ícones no mobile */
+      display: none;
       flex-direction: column;
       background: #1f1f1f;
       position: absolute;
-      top: 60px; /* abaixo do header */
+      top: 60px;
       right: 20px;
       padding: 10px;
       border-radius: 6px;
+      z-index: 9999; /* 🔥 garante que fique acima das imagens */
+    }
+
+
+    .bg-pink {
+      background-color: #ff69b4 !important; /* Rosa padrão, você pode trocar o tom */
     }
 
     .icons img {
@@ -131,18 +137,18 @@
     <div class="col-lg-6 d-flex">
       <!-- Miniaturas -->
       <div class="d-flex flex-column me-3">
-        <img src="../IMG/vestidos/Rectangle 12.png" class="img-thumbnail mb-2" alt="Produto Verde">
-        <img src="../IMG/vestidos/Rectangle 13.png" class="img-thumbnail mb-2" alt="Produto Azul">
-        <img src="../IMG/vestidos/Rectangle 14.png" class="img-thumbnail mb-2" alt="Produto Rosa">
-        
+        <img src="../IMG/vestidos/vestido.azul.png" class="img-thumbnail mb-2 thumb" alt="Produto Verde">
+        <img src="../IMG/vestidos/vestido.rosa.png" class="img-thumbnail mb-2 thumb" alt="Produto Azul">
+        <img src="../IMG/vestidos/vestido.verde.png" class="img-thumbnail mb-2 thumb" alt="Produto Rosa">
       </div>
       <!-- Imagem principal -->
       <div class="flex-grow-1 position-relative">
-        <img src="IMG/produto2.jpg" class="img-fluid rounded shadow" alt="Produto Destaque">
+        <img id="main-image" src="../IMG/vestidos/vestido.verde.png" class="img-fluid rounded shadow" alt="Produto Destaque">
         <span class="text-danger fw-bold d-block mt-2">(Esgotado)</span>
       </div>
     </div>
-    <!--Fim da Galeria de Imagens-------------------------------------------->
+    <!--Fim da Galeria de Imagens--------------------------------------------->
+
     
     <!--Inicio das Informações do Produto------------------------------------>
     <div class="col-lg-6">
@@ -151,7 +157,8 @@
       <p class="text-muted">3x de 29,97 no Cartão</p>
 
       <!-- Opções de cor -->
-      <div class="mb-3">
+      <!-- Opções de cor -->
+      <div class="mb-3 product-colors">
         <label class="fw-bold">Cor:</label><br>
         <span class="d-inline-block rounded-circle bg-primary p-3 me-2"></span>
         <span class="d-inline-block rounded-circle bg-pink p-3 me-2"></span>
@@ -159,7 +166,8 @@
       </div>
 
       <!-- Tamanhos -->
-      <div class="mb-3">
+      <!-- Tamanhos -->
+      <div class="mb-3 product-sizes">
         <label class="fw-bold">Tamanhos:</label><br>
         <button class="btn btn-outline-dark me-2">P</button>
         <button class="btn btn-outline-dark me-2">M</button>
@@ -167,9 +175,10 @@
       </div>
 
       <!-- Botão -->
-      <button class="btn btn-success w-100">
+      <button class="btn btn-success btn-sacola">
         <i class="bi bi-bag"></i> ADICIONAR À SACOLA
       </button>
+
     </div>
     <!--Fim das Informações do Produto--------------------------------------->
   </div>
@@ -216,5 +225,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Ícones Bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const mainImage = document.getElementById("main-image");
+    const thumbs = document.querySelectorAll(".thumb");
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        // Troca a imagem principal
+        mainImage.src = thumb.src;
+
+        // Remove destaque das outras
+        thumbs.forEach(t => t.classList.remove("selected"));
+
+        // Adiciona destaque na clicada
+        thumb.classList.add("selected");
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>

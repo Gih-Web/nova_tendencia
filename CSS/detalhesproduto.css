@@ -1,21 +1,25 @@
 .header{
 background-color: #1F1F1F; /* cor de fundo */
-padding: 40px ;/* tamanho da área (do cabeçalho) */
+padding: 20px ;/* tamanho da área (do cabeçalho) */
 align-items: center;/* alinhamento dos itens */
 display: flex; /* Redimensionar*/
 justify-content: space-between;/*colocar os itens lado a lado, colocando os espaços so lado */
 }
 
 .logo{
-
 display: flex;
 align-items: center;
 color: #ffffff;
 font-size: 18; /* tamanho da fonte do texto*/
 font-weight: bold; /*fonte em negrito*/
+height: 80px;
+width: auto;
+
 }
 .logo img{ /*dimensões da imagem*/ 
-  width: 80px;
+  display: flex;
+  height: 40px;
+  width: 50px;
   margin-right: 10px;
 
 }
@@ -48,8 +52,9 @@ font-weight: bold; /*fonte em negrito*/
 
 }
 .icons img{ /*configurando o tamanho das imagens dos icones*/
-    width: 32px;
-    height: 32px;
+    display: flex;
+    width: 15px;
+    height: 29px;
     cursor: pointer;
 
 }
@@ -115,3 +120,49 @@ font-weight: bold; /*fonte em negrito*/
   transform: scale(1.2); /* Efeito zoom ao passar o mouse */
 }
 
+.bg-pink {
+  background-color: #ff69b4 !important; /* Rosa padrão, você pode trocar o tom */
+}
+
+.thumb {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+}
+
+.thumb.selected {
+  border: 3px solid #ff9800;
+}
+
+/*espaço entre o prço e as core */
+.product-colors {
+  margin-top: 70px; /* aumenta o espaço entre o preço e as cores */
+}
+
+/*espaço entre o tamanho e as cores */
+.product-sizes {
+  margin-top: 50px; /* ajusta o valor como quiser */
+}
+
+.btn-sacola {
+  height: 40px;      /* altura */
+  width: 350px;        /* largura, pode trocar para 100% */
+  font-size: 15px;   /* aumenta o texto */
+  font-weight: bold; /* deixa o texto em negrito */
+  margin-top: 20px; /* 🔥 afasta o botão dos tamanhos */
+  background-color: #28a745; /* verde mais claro que o padrão */
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-sacola:hover {
+  background-color: #52c56d; /* ainda mais claro no hover */
+  border-color: hwb(134 34% 29%);
+}
