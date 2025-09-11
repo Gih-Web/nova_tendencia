@@ -9,163 +9,70 @@
 </head>
 <body>
 
-<!--Inicio do Header---------------------------------------------------->
-
-
-
+<!-- Header -->
 <header class="header">
   <div class="logo">
     <img src="../IMG/Logo1.png" alt="Logo da Loja Nova Tendência"/>
   </div>
 
   <div class="search-box">
-    <input type="text" class="pesquisar" placeholder="Pesquisar">
+    <input type="text" class="pesquisar form-control" placeholder="Pesquisar">
   </div>
 
-  <!-- Botão hambúrguer (visível só no mobile) -->
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
 
-  <!-- Ícones -->
   <div class="icons" id="icons">
-    <img src="../IMG/ajuda-chat.png" alt="Chat">
-    <img src="../IMG/sacola.png" alt="Carrinho">
-    <img src="../IMG/usuario.png" alt="Perfil">
+  <img src="../IMG/ajuda-chat.png" alt="Chat">
+  <div class="cart-wrapper" style="position: relative; display: inline-block;">
+    <img src="../IMG/sacola.png" id="cart-icon" alt="Carrinho">
+    <span id="cart-count" style="
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 50%;
+        display: none;
+    ">0</span>
   </div>
+  <img src="../IMG/usuario.png" alt="Perfil">
+</div>
+
 </header>
 
-<style>
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1f1f1f;
-    padding: 15px 20px;
-  }
-
-  .header {
-  display: flex;
-  padding: 15px 20px; /* aumenta em cima e embaixo */
-}
-
-
-  .logo img {
-    display: flex;
-    height: 70px;
-    width: 80px;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-
-  .search-box {
-    flex: 1;
-    margin: 0 20px;
-  }
-
-  
-  .icons img {
-    width: 28px;
-    margin-left: 15px;
-    cursor: pointer;
-  }
-
-  /* Botão hamburguer */
-  .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-  }
-
-  /* Responsivo */
-
-    @media (max-width: 768px) {
-    .icons {
-      display: none;
-      flex-direction: column;
-      background: #1f1f1f;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      padding: 10px;
-      border-radius: 6px;
-      z-index: 9999; /* 🔥 garante que fique acima das imagens */
-    }
-
-
-    .bg-pink {
-      background-color: #ff69b4 !important; /* Rosa padrão, você pode trocar o tom */
-    }
-
-    .icons img {
-      margin: 10px 0;
-    }
-
-    .menu-toggle {
-      display: block; /* mostra hambúrguer no mobile */
-    }
-  }
-</style>
-
-<script>
-  // Script para abrir/fechar os ícones
-  const menuToggle = document.getElementById("menu-toggle");
-  const icons = document.getElementById("icons");
-
-  menuToggle.addEventListener("click", () => {
-    if (icons.style.display === "flex") {
-      icons.style.display = "none";
-    } else {
-      icons.style.display = "flex";
-    }
-  });
-</script>
-
-
-
-    
-
-
-<!--Fim do Header------------------------------------------------------>
-
-
+<!-- Produto -->
 <div class="container my-5">
   <div class="row">
-    
-    <!--Inicio da Galeria de Imagens----------------------------------------->
+    <!-- Galeria -->
     <div class="col-lg-6 d-flex">
-      <!-- Miniaturas -->
       <div class="d-flex flex-column me-3">
-        <img src="../IMG/vestidos/vestido.azul.png" class="img-thumbnail mb-2 thumb" alt="Produto Verde">
-        <img src="../IMG/vestidos/vestido.rosa.png" class="img-thumbnail mb-2 thumb" alt="Produto Azul">
-        <img src="../IMG/vestidos/vestido.verde.png" class="img-thumbnail mb-2 thumb" alt="Produto Rosa">
+        <img src="../IMG/vestidos/vestido.azul.png" class="img-thumbnail mb-2 thumb" alt="Produto Azul">
+        <img src="../IMG/vestidos/vestido.rosa.png" class="img-thumbnail mb-2 thumb" alt="Produto Rosa">
+        <img src="../IMG/vestidos/vestido.verde.png" class="img-thumbnail mb-2 thumb" alt="Produto Verde">
       </div>
-      <!-- Imagem principal -->
       <div class="flex-grow-1 position-relative">
         <img id="main-image" src="../IMG/vestidos/vestido.verde.png" class="img-fluid rounded shadow" alt="Produto Destaque">
         <span class="text-danger fw-bold d-block mt-2">(Esgotado)</span>
       </div>
     </div>
-    <!--Fim da Galeria de Imagens--------------------------------------------->
 
-    
-    <!--Inicio das Informações do Produto------------------------------------>
+    <!-- Informações -->
     <div class="col-lg-6">
       <h4>Vestido Longo com Fenda Lateral e Babado no Decote</h4>
       <h3 class="text-warning fw-bold">R$ 89,90</h3>
       <p class="text-muted">3x de 29,97 no Cartão</p>
 
-      <!-- Opções de cor -->
-      <!-- Opções de cor -->
+      <!-- Cores -->
       <div class="mb-3 product-colors">
         <label class="fw-bold">Cor:</label><br>
-        <span class="d-inline-block rounded-circle bg-primary p-3 me-2"></span>
-        <span class="d-inline-block rounded-circle bg-pink p-3 me-2"></span>
-        <span class="d-inline-block rounded-circle bg-success p-3"></span>
+        <span class="d-inline-block rounded-circle bg-primary p-3 me-2" data-img="../IMG/vestidos/vestido.azul.png"></span>
+        <span class="d-inline-block rounded-circle bg-pink p-3 me-2" data-img="../IMG/vestidos/vestido.rosa.png"></span>
+        <span class="d-inline-block rounded-circle bg-success p-3" data-img="../IMG/vestidos/vestido.verde.png"></span>
       </div>
 
-      <!-- Tamanhos -->
       <!-- Tamanhos -->
       <div class="mb-3 product-sizes">
         <label class="fw-bold">Tamanhos:</label><br>
@@ -178,20 +85,17 @@
       <button class="btn btn-success btn-sacola">
         <i class="bi bi-bag"></i> ADICIONAR À SACOLA
       </button>
-
     </div>
-    <!--Fim das Informações do Produto--------------------------------------->
   </div>
 
-  <!--Inicio da Descrição e Detalhes---------------------------------------->
+  <!-- Descrição -->
   <div class="mt-5">
     <h6 class="fw-bold text-secondary">DESCRIÇÃO DO PRODUTO</h6>
     <hr>
     <p>
-      Elegante e confortável, este vestido longo azul é a escolha perfeita para diversas ocasiões.
+      Elegante e confortável, este vestido longo é a escolha perfeita para diversas ocasiões.
       Com modelagem fluida, decote em V com detalhe em babado e amarração delicada, ele valoriza a silhueta de forma leve e sofisticada.
       A fenda lateral garante um toque moderno e sensual, enquanto o tecido leve proporciona frescor e movimento.
-      Ideal para passeios, encontros e eventos ao ar livre, combinando estilo e praticidade.
     </p>
 
     <h6 class="fw-bold text-secondary mt-4">DETALHES DO PRODUTO</h6>
@@ -205,46 +109,45 @@
       <li>Tecido leve e confortável</li>
     </ul>
   </div>
-  <!--Fim da Descrição e Detalhes-------------------------------------------->
 
-  <!--Inicio da Avaliação--------------------------------------------------->
+  <!-- Avaliação -->
   <div class="mt-5">
     <h6 class="fw-bold text-secondary">AVALIAÇÕES</h6>
     <div class="border p-4 rounded text-center shadow-sm" style="max-width: 400px;">
       <h2 class="fw-bold">4.9</h2>
-      <div class="text-warning fs-4">
-        ★★★★☆
-      </div>
+      <div class="text-warning fs-4">★★★★☆</div>
       <p class="mt-2">Essa é a nota que este produto recebeu dos nossos clientes.</p>
       <p class="text-muted">Média de 59 avaliações</p>
     </div>
   </div>
-  <!--Fim da Avaliação------------------------------------------------------->
 </div>
 
+
+
+<footer class="footer">
+  <div class="footer-esquerdo">
+    <a href="#"><p>Sobre nós</p></a>
+    <a href="#"><p>Novidades</p></a>
+    <p>Desenvolvido por Giovanna Evellyn Santos Silva</p>
+  </div>
+  <div class="footer-direito">
+    <p>Conheça nossas redes sociais</p>
+    <div class="icons-sociais">
+      <a href="#"><img src="../IMG/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../IMG/facebook.png" alt="Facebook"></a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Ícones Bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const mainImage = document.getElementById("main-image");
-    const thumbs = document.querySelectorAll(".thumb");
+<!-- Link para o JS separado -->
+<script src="../JS/detalhesproduto.js" defer></script>
 
-    thumbs.forEach(thumb => {
-      thumb.addEventListener("click", () => {
-        // Troca a imagem principal
-        mainImage.src = thumb.src;
 
-        // Remove destaque das outras
-        thumbs.forEach(t => t.classList.remove("selected"));
-
-        // Adiciona destaque na clicada
-        thumb.classList.add("selected");
-      });
-    });
-  });
-</script>
 
 
 </body>

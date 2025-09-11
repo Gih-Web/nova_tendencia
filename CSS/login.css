@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+.header{
+background-color: #1F1F1F; /* cor de fundo */
+padding: 40px ;/* tamanho da área (do cabeçalho) */
+align-items: center;/* alinhamento dos itens */
+display: flex; /* Redimensionar*/
+justify-content: space-between;/*colocar os itens lado a lado, colocando os espaços so lado */
+}
+
+.logo{
+
+display: flex;
+align-items: center;
+color: #ffffff;
+font-size: 18; /* tamanho da fonte do texto*/
+font-weight: bold; /*fonte em negrito*/
+}
+.logo img{ /*dimensões da imagem*/ 
+  width: 80px;
+  margin-right: 10px;
+
+}
+
+.nova-tendencia{
+    text-align: center;
+    color: white;
+    z-index: 99;
+    font-style: italic;
+}
+
+/*.icons:hover {
+    background-color: rgb(49, 49, 49);
+}*/
+
+.footer{
+    background-color: #e7e7e7; /* cor de fundo*/
+    padding: 15px 40px 15px 40px; /*dimensão*/
+    color: #1F1F1F; /* cor do texto*/
+    font-family: Arial, Helvetica, sans-serif; /* fonte dos textos*/
+}
+
+.footer-esquerdo{
+    font-weight: bold; /*colocar  texto em negrito */
+    margin: 0;
+    
+
+}
+
+.footer-esquerdo p,
+.footer-esquerdo a {
+  display: flex;
+  margin: 5px 0;
+  color: #1F1F1F;
+  text-decoration: none;
+  font-size: 14px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.footer-esquerdo a:hover { text-decoration: underline; }
+.footer-direito{
+    text-align: right; /*Texto alinhado à direito*/
+
+}
+
+.icons-sociais{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+
+}.icons-sociais img{
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s; /* animação suave*/
+}
+
+/*Inicio do Estilo da Tela de Cadastro--------------------------------*/
+
+
+.bg-image {
+  background: url('../IMG/bg-cadastro.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* efeito de overlay escuro */
+}
+
+.bg-image .text-center {
+  position: relative;
+  z-index: 2;
+}
+
+
+.logo {
+  max-width: 120px;
+  align-items: center;
+}
+
+input.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+button.btn-dark {
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+button.toggle-password {
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 991px) {
+  .bg-image {
+    display: none;
+  }
+}
+/*Fim do Estilo da Tela de Cadastro----------------------------------*/
+
+/*Inicio da Imagem de Fundo com Overlay-----------------------------*/
+.bg-image {
+  background: url('../IMG/foto.init.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+ 
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* deixa a imagem escura */
+  z-index: 1;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2; /* fica acima do overlay escuro */
+}
+
+.logo {
+  max-width: 150px;
+}
+/*Fim da Imagem de Fundo com Overlay-------------------------------*/
+
+/*area de login*/
+.login-card{
+  background-color: white;
+  border: 1px;
+
+}
+
+
+#login-bemvindo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),   /* camada preta com 60% de opacidade */
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../IMG/foto.init.png") center/cover no-repeat;
+}

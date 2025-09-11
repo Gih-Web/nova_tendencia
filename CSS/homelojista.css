@@ -1,4 +1,3 @@
-/* ---------------- Body e Layout ---------------- */
 html, body {
     height: 100%;
     margin: 0;
@@ -6,6 +5,9 @@ html, body {
     flex-direction: column;
 }
 
+body{
+    background-color: #EEEEEE;
+}
 /* Conteúdo principal ocupa todo o espaço disponível */
 .conteudo-principal {
     flex: 1;
@@ -36,6 +38,17 @@ html, body {
   margin-left: 50px;
   cursor: pointer;
 }
+
+/* Hover da logo */
+.logo img {
+    transition: transform 0.3s ease; /* animação suave */
+}
+
+.logo img:hover {
+    transform: scale(1.05);  /* aumenta levemente a logo */
+    cursor: pointer;         /* muda o cursor para indicar clicável */
+}
+
 
 /* barra de pesquisa */
 .search-box {
@@ -69,6 +82,27 @@ html, body {
   cursor: pointer;
 }
 
+/* Ícones do header */
+.icons img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.2);       /* aumenta o ícone */
+    filter: brightness(1.3);     /* deixa o ícone mais claro */
+}
+
+/* Ícones das redes sociais do footer */
+.icons-sociais img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icons-sociais img:hover {
+    transform: scale(1.2);       /* aumenta o ícone */
+    filter: brightness(1.3);     /* deixa o ícone mais claro */
+}
+
+
 /* botão hamburguer */
 .menu-toggle {
   display: none;
@@ -97,97 +131,7 @@ html, body {
   }
 }
 
-.bg-pink {
-  background-color: #ff69b4 !important;
-}
 
-/* ---------------- Produto ---------------- */
-/* miniaturas */
-.thumb {
-  width: 100px; 
-  height: 140px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
-  display: block;
-}
-.thumb:hover {
-  transform: scale(1.05);
-}
-.thumb.selected,
-.thumb.selected-thumb {
-  outline: 3px solid #8a8a8a;
-  border-radius: 4px;
-}
-
-/* espaçamentos */
-.product-colors { margin-top: 70px; }
-.product-sizes { margin-top: 50px; }
-
-/* opções de cor */
-.product-colors span,
-.color-option {
-  cursor: pointer;
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  vertical-align: middle;
-  border: 2px solid rgba(0,0,0,0.06);
-}
-.product-colors span.selected,
-.color-option.selected-color {
-  outline: 3px solid #000000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* tamanhos */
-.product-sizes .btn {
-  min-width: 60px;
-  text-align: center;
-}
-.product-sizes .btn.active,
-.product-sizes .btn.selected-size {
-  background-color: #000 !important;
-  color: #fff !important;
-  border-color: #000 !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-.product-sizes .btn:not(:disabled) { cursor: pointer; }
-
-/* botão sacola */
-.btn-sacola {
-  height: 40px;
-  width: 350px;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 20px;
-  background-color: #1b9237;
-  border-color: #1b9237;
-  color: white;
-}
-.btn-sacola:hover {
-  background-color: #3ba153;
-  border-color: hwb(134 34% 29%);
-}
-
-.flying-img {
-  position: fixed;
-  width: 50px;
-  height: 100px;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-  pointer-events: none;
-  z-index: 1000;
-}
-
-/* texto esgotado */
-.main-esgotado { 
-  color: #d32f2f; 
-  font-weight: 700; 
-}
-
-/* ---------------- Footer ---------------- */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -221,13 +165,3 @@ html, body {
   transition: transform 0.3s ease;
 }
 .icons-sociais img:hover { transform: scale(1.2); }
-
-.product-colors span {
-  cursor: pointer;
-  border: 2px solid transparent;
-}
-
-.product-colors span.selected {
-  border: 2px solid black;
-}
-
