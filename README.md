@@ -73,7 +73,7 @@ estrutura do nosso site. (Menu, Tabela, Imagens, etc.)
   
 - width : define  a largura em px (pixels).
 - heigth : define a altura em px (pixels).
-- max-width : larrgura máxima.
+- max-width : largura máxima.
 - max-height : altura máxima.
 
 - margin : define as margens ao redor do elemento.
@@ -101,8 +101,8 @@ estrutura do nosso site. (Menu, Tabela, Imagens, etc.)
   ele fica atrás, etc.
 
 ## Bootstrap 
-É um framework que já vem com várias classes estilizadas de css, prontyas para uso. 
-Então ao invés de ficar configurando o arquivo css, você só prcisa chamar o nome das classes 
+É um framework que já vem com várias classes estilizadas de css, prontas para uso. 
+Então ao invés de ficar configurando o arquivo css, você só precisa chamar o nome das classes 
 do  bootstrap dentro do html que ele já configura os elementos .
 
 ### Classes do Bootstrap 
@@ -115,7 +115,7 @@ do  bootstrap dentro do html que ele já configura os elementos .
 - h-100 : define que o elemento ocupa 100% da altura.
 - bg-white : define cor de fundo branca.
 - mb-1 : define margem para baixo.
-- mt-1 taté o 5 : define margem para o topo. 
+- mt-1 até o 5 : define margem para o topo. 
 
 
 
