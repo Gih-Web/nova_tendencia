@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Cadastro</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="../CSS/style.css" />
   </head>
   <body>
+    
+ 
+    <header class="header">
+      <nav class="breadcrumb">
+        <a href="login.html"><img src="../IMG/voltar.png" alt="Voltar" class="image-voltar"></a>
+        <a href="/index.html">Home</a> 
+        <a href="/PAGINAS/login.html">/ Login</a> 
+        <a href="/PAGINAS/cadastro.html">/ Cadastro</a>
+      </nav>
+
+      <div class="nova-tendencia">
+        <p>Nova Tendencia</p>
+      </div>
+
+
+    </header>
+
+
+
+
     <!--Inicio do Container Principal-------------------------------------------------->
     <div class="container-fluid">
       <div class="row min-vh-100">
@@ -41,15 +61,15 @@
           
 
             <!--Inicio do Formulário de Cadastro-------------------------------------->
-            <form>
+            <form action=" caminho do php " method="post" >
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome completo:</label>
-                <input type="text" class="form-control" id="nome" required />
+                <input type="text" class="form-control" id="nome" name="nome" required />
               </div>
 
               <div class="mb-3">
                 <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" class="form-control" id="cpf" required />
+                <input type="text" class="form-control" id="cpf" name="cpf" required />
               </div>
 
               <div class="mb-3">
@@ -58,13 +78,14 @@
                   type="text"
                   class="form-control"
                   id="telefone"
+                  name="telefone"
                   required
                 />
               </div>
 
               <div class="mb-3">
                 <label for="email" class="form-label">E-mail:</label>
-                <input type="email" class="form-control" id="email" required />
+                <input type="email" class="form-control" id="email" name="email" required />
               </div>
 
               <div class="mb-3 position-relative">
@@ -74,6 +95,7 @@
                     type="password"
                     class="form-control"
                     id="senha"
+                    name="senha"
                     required
                   />
                   <button
@@ -95,6 +117,7 @@
                     type="password"
                     class="form-control"
                     id="confirmarSenha"
+                    name="confirmarSenha"
                     required
                   />
                   <button
@@ -107,10 +130,10 @@
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-dark w-100">
+              <button type="submit" class=" btn-cadastrese btn btn-dark w-100">
                 Cadastre-se
               </button>
-            </form>
+            </form  id="cadastroForm" action="javascript:void(0);">
             <!--Fim do Formulário de Cadastro----------------------------------------->
           </div>
         </div>
@@ -154,33 +177,19 @@
     </script>
 
     <footer class="footer">
-      <!-- Area do rodapé que ficará os textos do lado esquerdo-->
-      <div class="footer-esquerdo">
-        <p>Desenvolvido por Giovanna Evellyn Santos Silva</p>
+    <div class="footer-esquerdo">
+        <a href=""><p>Novidades</p></a>
+        <a href=""><p>Sobre nós</p></a>
+        <p> Desenvolvido por Giovanna Evellyn Santos Silva</p>
+    </div>
 
-        <a href="">
-          <p>Sobre nós</p>
-        </a>
-
-        <a href="">
-          <p>Novidades</p>
-        </a>
+    <div class="footer-direito">
+      <p>Conheça nossas redes sociais</p>
+      <div class="icons-sociais">
+        <a href=""><img src="../IMG/instagram.png" alt="Instagram"></a>
+        <a href=""><img src="../IMG/facebook.png" alt="Facebook"></a>
       </div>
-
-      <!-- Area diretia com as redes sociais -->
-
-      <div class="footer-direito">
-        <p>Conheça nossas redes sociais</p>
-        <div class="icons-sociais">
-          <a href="">
-            <img src="../IMG/instagram.png" alt="Instagram" />
-          </a>
-
-          <a href="">
-            <img src="../IMG/facebook.png" alt="Facebook" />
-          </a>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
   </body>
 </html>

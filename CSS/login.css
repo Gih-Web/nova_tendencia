@@ -3,27 +3,123 @@ body {
   background-color: #fff;
 }
 
-.header{
-background-color: #1F1F1F; /* cor de fundo */
-padding: 40px ;/* tamanho da área (do cabeçalho) */
-align-items: center;/* alinhamento dos itens */
-display: flex; /* Redimensionar*/
-justify-content: space-between;/*colocar os itens lado a lado, colocando os espaços so lado */
+
+.header {
+  background-color: #1F1F1F; 
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo{
-
-display: flex;
-align-items: center;
-color: #ffffff;
-font-size: 18; /* tamanho da fonte do texto*/
-font-weight: bold; /*fonte em negrito*/
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  height: 80px;
+  width: auto;
 }
-.logo img{ /*dimensões da imagem*/ 
-  width: 80px;
-  margin-right: 10px;
-
+.logo img { 
+  display: flex;
+  height: 75px;
+  width: 90px;
+  margin-left: 50px;
+  cursor: pointer;
 }
+
+/* barra de pesquisa */
+.search-box {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 20px;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+}
+.search-box input {
+  width: 100%;
+  padding: 10px 30px 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Ícones */
+.icons {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-right: 60px;
+}
+.icons img {
+  display: flex;
+  height: 29px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.icons img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.3);
+}
+
+.icons img:hover {
+    transform: scale(1.2);       /* aumenta o ícone */
+    filter: brightness(1.3);     /* deixa o ícone mais claro */
+}
+
+/* Ícones das redes sociais do footer */
+.icons-sociais img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.3);
+}
+
+.icons-sociais img:hover {
+    transform: scale(1.2);       /* aumenta o ícone */
+    filter: brightness(1.3);     /* deixa o ícone mais claro */
+}
+
+.logo img {
+    transition: transform 0.3s ease; /* animação suave */
+}
+
+.logo img:hover {
+    transform: scale(1.05);  /* aumenta levemente a logo */
+    cursor: pointer;         /* muda o cursor para indicar clicável */
+}
+
+
+/* botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .icons {
+    display: none;
+    flex-direction: column;
+    background: #1f1f1f;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 9999;
+  }
+  .icons img {
+    margin: 10px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
 .nova-tendencia{
     text-align: center;
@@ -36,18 +132,16 @@ font-weight: bold; /*fonte em negrito*/
     background-color: rgb(49, 49, 49);
 }*/
 
-.footer{
-    background-color: #e7e7e7; /* cor de fundo*/
-    padding: 15px 40px 15px 40px; /*dimensão*/
-    color: #1F1F1F; /* cor do texto*/
-    font-family: Arial, Helvetica, sans-serif; /* fonte dos textos*/
-}
-
-.footer-esquerdo{
-    font-weight: bold; /*colocar  texto em negrito */
-    margin: 0;
-    
-
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e7e7e7; /* cor final */
+  color: #1F1F1F;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  /* REMOVIDO: position: fixed; bottom: 0; left: 0; */
 }
 
 .footer-esquerdo p,
@@ -60,25 +154,17 @@ font-weight: bold; /*fonte em negrito*/
   flex-direction: column;
   gap: 5px;
 }
-
-
 .footer-esquerdo a:hover { text-decoration: underline; }
-.footer-direito{
-    text-align: right; /*Texto alinhado à direito*/
 
+.footer-direito { text-align: right; }
+
+.icons-sociais a { margin-left: 10px; }
+.icons-sociais img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
 }
-
-.icons-sociais{
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-
-}.icons-sociais img{
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s; /* animação suave*/
-}
-
+.icons-sociais img:hover { transform: scale(1.2); }
 /*Inicio do Estilo da Tela de Cadastro--------------------------------*/
 
 
@@ -172,3 +258,59 @@ button.toggle-password {
     ),
     url("../IMG/foto.init.png") center/cover no-repeat;
 }
+
+.sem-conta{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+}
+
+.cadastro-btn {
+  display: block; 
+  width: 100%; /* ocupa toda a largura disponível */
+  max-width: 400px; /* nunca passa de 400px */
+  margin: 0 auto; /* centraliza */
+  height: 45px;
+  background-color: transparent; 
+  color: black; 
+  border: 1px solid black; 
+  border-radius: 0.600rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cadastro-btn:hover {
+  background-color: #eeeeee; /* cinza escuro */
+  color: rgb(41, 41, 41);
+}
+
+.tela-cadastro{
+  text-decoration: none;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.image-voltar{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.esqueci-senha{
+  cursor: pointer;
+  color: rgb(0, 149, 218);
+}
+

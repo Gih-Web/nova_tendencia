@@ -17,10 +17,14 @@
 
 
     <header class="header">
-  <div class="logo">
-    <img src="../IMG/Logo1.png" alt="Logo da Loja Nova Tendência"/>
-  </div>
-
+       <nav class="breadcrumb">
+        <a href="/index.html"><img src="../IMG/voltar.png" alt="Voltar" class="image-voltar"></a>
+        <a href="/index.html">Home</a> 
+        <a href="/PAGINAS/login.html">/ Login</a> 
+        
+      </nav>
+>
+  
   <div class="nova-tendencia">
     <p>Nova Tendencia</p>
   </div>
@@ -37,7 +41,7 @@
         <!--Inicio da Coluna Esquerda (Boas-vindas)------------------------------------>
         <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-image">
         <div class="overlay-content d-flex flex-column align-items-center text-center text-white px-25">
-            <img src="../IMG/Logo2.png" alt="Logo" class="mb-4 logo">
+        
             <h2 class="fw-bold">Bem-Vindo!</h2>
             <p>Crie sua conta para iniciarmos<br>uma nova experiência</p>
         </div>
@@ -84,10 +88,21 @@
               </div>
 
               
-
-              <button type="submit" class="btn btn-dark w-100">
-                Cadastre-se
+              <p class="esqueci-senha">Esqueceu a senha?</p>
+              <button type="submit" class="btn btn-dark w-100 mt-4">
+                Entrar
               </button>
+
+
+              <p class="sem-conta">Não tem uma Conta?:</p>
+              <a href="/PAGINAS/cadastro.html" class="tela-cadastro">
+
+                <button type="button" class="cadastro-btn">
+                  Cadastre-se
+                </button>
+
+              </a>
+
             </form>
             <!--Fim do Formulário de Cadastro----------------------------------------->
           </div>
@@ -100,69 +115,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!--Inicio do Script JS (Máscaras e Mostrar Senha)------------------------------->
-    <script>
-      // Máscara CPF
-      document.getElementById("cpf").addEventListener("input", function (e) {
-        let value = e.target.value.replace(/\D/g, "");
-        if (value.length > 11) value = value.slice(0, 11);
-        value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-        e.target.value = value;
-      });
-
-      // Máscara Telefone
-      document
-        .getElementById("telefone")
-        .addEventListener("input", function (e) {
-          let value = e.target.value.replace(/\D/g, "");
-          if (value.length > 11) value = value.slice(0, 11);
-          value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
-          value = value.replace(/(\d{5})(\d{4})$/, "$1-$2");
-          e.target.value = value;
-        });
-
-      // Mostrar/Ocultar senha
-      document.querySelectorAll(".toggle-password").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          const input = document.getElementById(this.dataset.target);
-          input.type = input.type === "password" ? "text" : "password";
-        });
-      });
-    </script>
+  
 
     <footer class="footer">
-      <!-- Area do rodapé que ficará os textos do lado esquerdo-->
-      <div class="footer-esquerdo">
-        
+    <div class="footer-esquerdo">
+        <a href=""><p>Novidades</p></a>
+        <a href=""><p>Sobre nós</p></a>
+        <p> Desenvolvido por Giovanna Evellyn Santos Silva</p>
+    </div>
 
-        <a href="">
-          <p>Sobre nós</p>
-        </a>
-
-        <a href="">
-          <p>Novidades</p>
-        </a>
-
-
-        <p>Desenvolvido por Giovanna Evellyn Santos Silva</p>
-        
+    <div class="footer-direito">
+      <p>Conheça nossas redes sociais</p>
+      <div class="icons-sociais">
+        <a href=""><img src="../IMG/instagram.png" alt="Instagram"></a>
+        <a href=""><img src="../IMG/facebook.png" alt="Facebook"></a>
       </div>
-
-      <!-- Area diretia com as redes sociais -->
-
-      <div class="footer-direito">
-        <p>Conheça nossas redes sociais</p>
-        <div class="icons-sociais">
-          <a href="">
-            <img src="../IMG/instagram.png" alt="Instagram" />
-          </a>
-
-          <a href="">
-            <img src="../IMG/facebook.png" alt="Facebook" />
-          </a>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
   </body>
 </html>

@@ -69,6 +69,37 @@ html, body {
   cursor: pointer;
 }
 
+.icons img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.3);
+}
+
+.icons img:hover {
+    transform: scale(1.2);       /* aumenta o ícone */
+    filter: brightness(1.3);     /* deixa o ícone mais claro */
+}
+
+/* Ícones das redes sociais do footer */
+.icons-sociais img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.3);
+}
+
+.icons-sociais img:hover {
+    transform: scale(1.2);       /* aumenta o ícone */
+    filter: brightness(1.3);     /* deixa o ícone mais claro */
+}
+
+.logo img {
+    transition: transform 0.3s ease; /* animação suave */
+}
+
+.logo img:hover {
+    transform: scale(1.05);  /* aumenta levemente a logo */
+    cursor: pointer;         /* muda o cursor para indicar clicável */
+}
+
+
 /* botão hamburguer */
 .menu-toggle {
   display: none;
