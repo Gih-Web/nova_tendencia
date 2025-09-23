@@ -8,64 +8,65 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../CSS/login.css" />
   </head>
   <body>
-
-
     <header class="header">
-       <nav class="breadcrumb">
-        <a href="/index.html"><img src="../IMG/voltar.png" alt="Voltar" class="image-voltar"></a>
-        <a href="/index.html">Home</a> 
-        <a href="/PAGINAS/login.html">/ Login</a> 
-        
+      <nav class="breadcrumb">
+        <a href="/index.html"
+          ><img src="../IMG/voltar.png" alt="Voltar" class="image-voltar"
+        /></a>
+        <a href="/index.html">Home</a>
+        <a href="/PAGINAS/login.html">/ Login</a>
       </nav>
->
-  
-  <div class="nova-tendencia">
-    <p>Nova Tendencia</p>
-  </div>
 
+      <div class="nova-tendencia">
+        <p>Nova Tendencia</p>
+      </div>
+    </header>
 
-</header>
-
-
-    <!--Inicio do Container Principal-------------------------------------------------->
+    <!-- Container Principal -->
     <div class="container-fluid">
       <div class="row min-vh-100">
-        <!--Inicio da Coluna Esquerda (Boas-vindas)------------------------------------>
-        <!--Inicio da Coluna Esquerda (Boas-vindas)------------------------------------>
-        <!--Inicio da Coluna Esquerda (Boas-vindas)------------------------------------>
-        <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-image">
-        <div class="overlay-content d-flex flex-column align-items-center text-center text-white px-25">
-        
+        <!-- Coluna Esquerda -->
+        <div
+          class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-image"
+        >
+          <div
+            class="overlay-content d-flex flex-column align-items-center text-center text-white px-25"
+          >
             <h2 class="fw-bold">Bem-Vindo!</h2>
-            <p>Crie sua conta para iniciarmos<br>uma nova experiência</p>
+            <p>
+              Crie sua conta para iniciarmos<br />uma nova experiência
+            </p>
+          </div>
         </div>
-        </div>
-<!--Fim da Coluna Esquerda (Boas-vindas)--------------------------------------->
 
-<!--Fim da Coluna Esquerda (Boas-vindas)--------------------------------------->
-
-
-        <!--Inicio da Coluna Direita (Formulário)-------------------------------------->
-        <div class="col-lg-6 d-flex align-items-center justify-content-center px-0">
+        <!-- Coluna Direita (Formulário) -->
+        <div
+          class="col-lg-6 d-flex align-items-center justify-content-center px-0"
+        >
           <div class="w-100" style="max-width: 400px">
-            <div class="text-center mb-4 d-flex flex-column align-items-center text-center px-0">
+            <div
+              class="text-center mb-4 d-flex flex-column align-items-center text-center px-0"
+            >
               <img src="../IMG/Logo1.png" alt="Logo" class="mb-3 logo" />
               <h3 class="fw-bold">Login</h3>
             </div>
-          
 
-            <!--Inicio do Formulário de Cadastro-------------------------------------->
-            <form>
-            
+            <!-- Formulário de Login -->
+            <form action="../PHP/login.php" method="POST">
               <div class="mb-3">
                 <label for="email" class="form-label">E-mail:</label>
-                <input type="email" class="form-control" id="email" required />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
 
               <div class="mb-3 position-relative">
@@ -75,6 +76,7 @@
                     type="password"
                     class="form-control"
                     id="senha"
+                    name="senha"
                     required
                   />
                   <button
@@ -87,50 +89,51 @@
                 </div>
               </div>
 
-              
               <p class="esqueci-senha">Esqueceu a senha?</p>
               <button type="submit" class="btn btn-dark w-100 mt-4">
                 Entrar
               </button>
 
-
               <p class="sem-conta">Não tem uma Conta?:</p>
               <a href="/PAGINAS/cadastro.html" class="tela-cadastro">
-
-                <button type="button" class="cadastro-btn">
-                  Cadastre-se
-                </button>
-
+                <button type="button" class="cadastro-btn">Cadastre-se</button>
               </a>
-
             </form>
-            <!--Fim do Formulário de Cadastro----------------------------------------->
+            <!-- Fim do Formulário -->
           </div>
         </div>
-        <!--Fim da Coluna Direita (Formulário)---------------------------------------->
       </div>
     </div>
-    <!--Fim do Container Principal--------------------------------------------------->
+
+    <footer class="footer">
+      <div class="footer-esquerdo">
+        <a href=""><p>Novidades</p></a>
+        <a href=""><p>Sobre nós</p></a>
+        <p>Desenvolvido por Giovanna Evellyn Santos Silva</p>
+      </div>
+
+      <div class="footer-direito">
+        <p>Conheça nossas redes sociais</p>
+        <div class="icons-sociais">
+          <a href=""><img src="../IMG/instagram.png" alt="Instagram" /></a>
+          <a href=""><img src="../IMG/facebook.png" alt="Facebook" /></a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!--Inicio do Script JS (Máscaras e Mostrar Senha)------------------------------->
-  
+    <script>
+      // Captura parâmetros da URL
+      const urlParams = new URLSearchParams(window.location.search);
 
-    <footer class="footer">
-    <div class="footer-esquerdo">
-        <a href=""><p>Novidades</p></a>
-        <a href=""><p>Sobre nós</p></a>
-        <p> Desenvolvido por Giovanna Evellyn Santos Silva</p>
-    </div>
+      if (urlParams.get("cadastro") === "ok") {
+        alert("Cadastro realizado com sucesso! Faça login.");
+      }
 
-    <div class="footer-direito">
-      <p>Conheça nossas redes sociais</p>
-      <div class="icons-sociais">
-        <a href=""><img src="../IMG/instagram.png" alt="Instagram"></a>
-        <a href=""><img src="../IMG/facebook.png" alt="Facebook"></a>
-      </div>
-    </div>
-  </footer>
+      if (urlParams.get("erro")) {
+        alert(urlParams.get("erro"));
+      }
+    </script>
   </body>
 </html>
