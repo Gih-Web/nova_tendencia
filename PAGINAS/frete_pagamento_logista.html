@@ -11,25 +11,39 @@
   </head>
   <body>
     
-  <!-- 1) Menu de navegação -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">PetAmigo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- Header -->
+ <header class="header">
+  <div class="logo">
+    <a href="/index.html"><img src="../IMG/Logo1.png" alt="Logo da Loja Nova Tendência"/></a>
+  </div>
 
-      <div class="collapse navbar-collapse" id="topNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#promocoes">Promoções</a></li>
-          <li class="nav-item"><a class="nav-link active" href="/PAGINAS/frete_pagamento.html">Pagamentos e Fretes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#conversas">Conversas</a></li>
-      
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="search-box">
+    <input type="text" class="pesquisar form-control" placeholder="Pesquisar">
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <div class="icons" id="icons">
+  <img src="../IMG/ajuda-chat.png" alt="Chat">
+  <div class="cart-wrapper" style="position: relative; display: inline-block;">
+    <img src="../IMG/sacola.png" id="cart-icon" alt="Carrinho">
+    <span id="cart-count" style="
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 50%;
+        display: none;
+    ">0</span>
+  </div>
+  <a href="/PAGINAS/login.html"><img src="../IMG/usuario.png" alt="Perfil"></a>
+</div>
+
+</header>
 
   <main class="container my-4">
 
@@ -108,7 +122,7 @@
         <div class="card-body">
 
 
-          <form action="../PHP/cadastro_formas_pagamento.php" method="post" class="row g-3">
+          <form action="../PHP/cadastro_frete.php" method="post" class="row g-3">
             <div class="col-md-4">
               <label for="frBairro" class="form-label">Bairro</label>
               <input type="text" id="frBairro" name="bairro" class="form-control" placeholder="Ex.: Centro" required/>
@@ -190,12 +204,20 @@
     </section>
   </main>
 
-  <!-- Rodapé (igual ao anterior) -->
-  <footer class="footer py-4  border-top">
-    <div class="container text-center small text-muted">
-      © <span id="year"></span> Minha Loja — Painel Administrativo
+<footer class="footer d-flex justify-content-between p-3 border-top bg-white">
+  <div class="footer-esquerdo">
+    <a href="#"><p>Sobre nós</p></a>
+    <a href="#"><p>Novidades</p></a>
+    <p>Desenvolvido por Giovanna Evellyn Santos Silva</p>
+  </div>
+  <div class="footer-direito">
+    <p>Conheça nossas redes sociais</p>
+    <div class="icons-sociais">
+      <a href="#"><img src="../IMG/instagram.png" alt="Instagram" height="28"></a>
+      <a href="#"><img src="../IMG/facebook.png" alt="Facebook" height="28"></a>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Bootstrap bundle -->
   <script

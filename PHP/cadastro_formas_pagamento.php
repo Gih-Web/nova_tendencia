@@ -41,7 +41,7 @@ try{
      Values (:nomepagamento)";
      // executando o comando no banco de dados
      $inserir = $pdo->prepare($sql)->execute([
-        ":nomepagamento" => $nomepagamento;
+        ":nomepagamento" => $nomepagamento,
      ]);
 
         /* Verificando se foi cadastrado no banco de dados */

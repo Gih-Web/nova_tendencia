@@ -50,15 +50,15 @@ try{
 
      /* Verificando se foi cadastrado no banco de dados */
      if($inserir){
-        redirecWith("../paginas/frete_pagamento.html",
+        redirecWith("../paginas/frete_pagamento_logista.html",
         ["cadastro" => "ok"]) ;
      }else{
-        redirecWith("../paginas/frete_pagamento.html"
+        redirecWith("../paginas/frete_pagamento_logista.html"
         ,["erro" =>"Erro ao cadastrar no banco
          de dados"]);
      }
 }catch(\Exception $e){
-redirecWith("../paginas/frete_pagamento.html",
+redirecWith("../paginas/frete_pagamento_logista.html",
       ["erro" => "Erro no banco de dados: "
       .$e->getMessage()]);
 }
