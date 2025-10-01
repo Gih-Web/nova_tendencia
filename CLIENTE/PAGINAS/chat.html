@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Endereço de Entrega</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/fretepagamento.css">
+  <style>
+    body {
+      background-color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 40px;
+    }
+
+    .endereco-container {
+      background: white;
+      padding: 25px;
+      border: 1px solid #ccc;
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .endereco-container h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .endereco-container label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .endereco-container input {
+      width: 100%;
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .numero-complemento {
+      display: flex;
+      gap: 10px;
+    }
+
+    .numero-complemento input {
+      flex: 1;
+    }
+
+    .resumo-compra {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      min-width: 300px;
+      max-height: 200px;
+    }
+
+    .resumo-compra h4 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .resumo-compra hr {
+      margin: 10px 0;
+    }
+
+    .resumo-compra .linha {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+
+    .total {
+      color: red;
+      font-weight: bold;
+    }
+
+    .btn-salvar {
+      display: block;
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 20px auto 0;
+      width: 200px;
+      text-align: center;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    .btn-salvar:hover {
+      background: #333;
+    }
+
+    .footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="../IMG/Logo1.png" alt="Logo da Loja Nova Tendência"/>
+    </div>
+
+    <div class="search-box">
+      <input type="text" class="pesquisar form-control" placeholder="Pesquisar">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <div class="icons" id="icons">
+      <img src="../IMG/ajuda-chat.png" alt="Chat">
+      <div class="cart-wrapper" style="position: relative; display: inline-block;">
+        <img src="../IMG/sacola.png" id="cart-icon" alt="Carrinho">
+        <span id="cart-count" style="
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%;
+            display: none;
+        ">0</span>
+      </div>
+      <img src="../IMG/usuario.png" alt="Perfil">
+    </div>
+  </header>
+
+
+  <footer class="footer">
+    <div class="footer-esquerdo">
+      <p> Desenvolvido por Giovanna Evellyn Santos Silva</p>
+      <a href=""><p>Sobre nós</p></a>
+      <a href=""><p>Novidades</p></a>
+    </div>
+
+    <div class="footer-direito">
+      <p>Conheça nossas redes sociais</p>
+      <div class="icons-sociais">
+        <a href=""><img src="../IMG/instagram.png" alt="Instagram"></a>
+        <a href=""><img src="../IMG/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
